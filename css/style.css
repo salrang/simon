@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import url("https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+  color:inherit; /*body색상 상속되라는 의미*/
+  text-decoration: none;
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-family: 'Spoqa Han Sans', serif;
+  font-weight: 400; /*url주소 구글링해서 미리 지원하는 폰트 내용봤어.*/
+  line-height: 1.15; /*에릭은 1을 사용했지만 한글에서는 1.15로 해야 안짤려.*/
+  color: #181818;
+  font-size: 2rem; /* body폰트의 x2,반응형디자인할때 좋아.rem은 IE6~8지원하지않아. */
+  /* background-image:linear-gradient(45deg,red,green); */
+  background-color: #e9edef;
+}
