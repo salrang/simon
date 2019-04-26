@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>User Experience Design Portfolio of Simon Pan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header"> <!--header.header누르고 엔터-->
+    <h1 class="logo"><a href="http://simonpan.com/"><img src="img/sp-logo.png" alt="Simon pan"></a></h1> <!--h1.logo>a>img쓰고 엔터-->
+    <p class="introduce">Simon Pan is a Product Designer based in San Francisco.</p>
+    <nav class="navigation"> <!--메뉴영역을 nav로 사용. nav는 제목정해주는게 좋아.-->
+      <h2 class="readable-hidden">site navigation</h2>
+      <ul class="menu"> <!--ul.menu>li*3>a[href="#"]-->
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Writing</a></li>
+        <li><a href="#">About</a></li>
+      </ul> 
+    </nav>
+  </header> <!--header tag는 여러번 사용할 수 있어.section안에서도 사용가능.-->
+
+  <section class="product uber">
+    <figure class="thumbnail wrapper"> <!--figure는 캡션(이미지+설명글)을 달만한 것을 넣을수있는 그룹, div사용해도 상관없음, figure는 자동적으로 들여쓰기됨(마진값저절로 들어가있어)-->
+      <img src="img/uber.jpg" alt="">
+    </figure>
+    <div class="content wrapper"> <!--감쌀때 wrap이나 container주로 사용-->
+      <h2 class="subject">Uber Magic 2.0</h2>
+      <p class="summary">Perfecting the pickup for the Rider app redesign.</p>
+      <a href="#" class="more">Read More</a>
+    </div>
+  </section> 
+  <section class="product amazon">
+    <figure class="thumbnail wrapper"> <!--figure는 캡션(이미지+설명글)을 달만한 것을 넣을수있는 그룹, div사용해도 상관없음-->
+      <img src="img/prime.jpg" alt="">
+    </figure>
+    <div class="content wrapper"> <!--감쌀때 wrap이나 container주로 사용-->
+      <h2 class="subject">Amazon Prime Music</h2>
+      <p class="summary">Launching and evolving Amazon's streaming service.</p>
+      <a href="#" class="more">Read More</a>
+    </div>
+  </section> 
+  <section class="product bike">
+    <figure class="thumbnail wrapper"> <!--figure는 캡션(이미지+설명글)을 달만한 것을 넣을수있는 그룹, div사용해도 상관없음-->
+      <img src="img/bikes.jpg" alt="">
+    </figure>
+    <div class="content wrapper"> <!--감쌀때 wrap이나 container주로 사용-->
+      <h2 class="subject">London By Bike</h2>
+      <p class="summary">Building a better London with Barclays Cycle Hire.</p>
+      <a href="#" class="more">Read More</a>
+    </div>
+  </section> 
+  <section class="product nsw">
+    <figure class="thumbnail wrapper"> <!--figure는 캡션(이미지+설명글)을 달만한 것을 넣을수있는 그룹, div사용해도 상관없음-->
+      <img src="img/ilcnsw.jpg" alt="">
+    </figure>
+    <div class="content wrapper"> <!--감쌀때 wrap이나 container주로 사용-->
+      <h2 class="subject">Independent Living NSW</h2>
+      <p class="summary">Changing lives through access to assistive technology.</p>
+      <a href="#" class="more">Read More</a>
+    </div>
+  </section> 
+  <footer class="footer">
+      <address class="email">
+          <a href="mailto:simonpan.me.com">simonpan@me.com</a>
+      </address>
+      <ui class="sns">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ui>
+        <small class="copyright">Website design and content &copy; 2019 Simon Pan.</small> <!--&copy;, 주로 저작권정보쓸때 small태그 사용함-->
+  </footer>
+
+</body>
+</html>
