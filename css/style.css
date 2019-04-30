@@ -1,6 +1,23 @@
 @charset "utf-8";
 @import url("https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+*, *::before, *::after{ /*별은 모든요소 다 선택*/
+	box-sizing: border-box;
+}
+.readable-hidden{
+	position: absolute;
+	width: 1px; /*0으로 만들면 시각장애인들이 보는 커서가 아예 안가. 그래서 1을 준거야*/
+	height: 1px;
+	overflow: hidden;
+	margin: -1px;
+	clip: rect(0,0,0,0);
+	visibility: hidden;
+}
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,7 +43,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-ol, ul {
+ol, ul, li{
 	list-style: none;
 }
 blockquote, q {
@@ -56,4 +73,112 @@ body{
   font-size: 2rem; /* body폰트의 x2,반응형디자인할때 좋아.rem은 IE6~8지원하지않아. */
   /* background-image:linear-gradient(45deg,red,green); */
   background-color: #e9edef;
+}
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* 커맨드 /누르고 엔터 */
+/* header */
+.header{
+	display: flex; /*block요소야, flex를 부모요소에게 줬다면 float은 띄워야되는 해당요소에 줬었어*/
+	display: row;
+	/* flex-direction: column   row값이 디폴트야 */
+	/* justify-content: center;   display가 flex여야만 사용할수있어,보통 IE10이상 지원할때 사용가능*/
+	justify-content: space-between;
+	/* justify-content: space-around; 정렬할때 필요해1*/
+	/* justify-content: space-evenly; */
+	align-items: center;
+	/* align-items: stretch; 가 디폴트야 정렬할때 필요해2*/
+	margin: 80px 0;
+}
+/* 메인메뉴 */
+.menu {
+	display: flex;
+}
+.menu li{
+	font-family: 'spoqa-han-sans', sans-serif;
+	font-weight: 700; /*글자불러올때 미리 지정했던 폰트 두께야*/
+	text-transform: uppercase; /*대문자처리*/
+	margin-left: 2em;
+	letter-spacing: -1px;   /*이 기능은 추천안해. word-spacing도 마찬가지*/
+}
+
+.menu .is-act{
+	border-bottom: 2px solid #000;
+}
+
+/* 포트폴리오 섹션 */
+.product{
+	display:flex;
+	background: #fff;
+	border: 1px solid #aaa;
+	padding: 50px;
+	margin: 40px;
+	align-items:center;
+	/* overflow: hidden;  대신에 after사용함.*/
+}
+/* .product::after{  최근엔 콜론을 두개붙여. 예전에는 하나붙였었어. 상관은없음, product안에 가상의 자식요소 만든것
+	content:"";
+	display:block;
+	clear: both;
+} */
+
+/* .thumbnail{
+	float: left;
+	}
+	/*float은 반드시 clear을 같이 써줘야돼. 자식요소Eoansdp, */
+	/*부모요소에는 overflow:hidden;을 주지만 완벽한 해결책은 아냐.*/
+
+/* .thumbnail + .wrapper{   썸네일+프로덕트 포함한 가로크기지정한것
+	width: 400px;
+} */
+
+/* 플로트를 활용한 레이아웃 */
+/* .product .wrapper{
+	background-color: yellow;
+	float:left;
+} */
+
+/* flex를 활용한 레이아웃 */
+
+.thumbnail{
+	margin-right:50px;
+}
+
+.product .subject{
+	font-family: 'Spoqa Han serif', sans-serif;
+	font-weight:700;
+	text-transform: uppercase; /*tt*/
+	font-size:3.5rem; /*35px이랑 같아. 처음 지정을 10px으로 지정했기때문에,*/
+}
+
+.product .summary{
+	margin:1em 0; /*마진써서 일부러 위에 간격 병합함, 
+	상속받은 글자크기의 1배,위에꺼 상속받아서 35px같아.만약 rem으로 사용했다면 폰트사이즈에 따라
+	달라진 여백을 수정하려면 두번수정해야돼.
+	그런데 em으로 했을때는 rem단위 상속받기때문에 rem한번만 수정해도 됨 */
+}
+
+.product .more{
+	font-size: 1.5rem;
+}
+
+.footer{
+ margin: 150px 0 50px ;
+ font-size:1.5rem;
+ display:flex;
+}
+.sns{
+	display:flex;
+}
+.sns li::before{    /*의미없는 점이니까, 곁따옴표가 더 최신문법이야. 홑따옴표도 상관없어*/
+	content:"ㆍ";  
+	margin:0 5px;
+}
+
+.copyright{
+	margin-left:auto; /*email이라 sns을 div로 묶고, justyf로 양사이드로 가게할수도있어.*/
 }
