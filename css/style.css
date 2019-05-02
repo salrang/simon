@@ -208,6 +208,12 @@ img{
 	background-color: #fff;
 	padding: 1em 2em;   /* 한글자만큼,두글자만큼 */
 }
+
+.gray{
+	background-color: #999;
+	columns: #000000;
+	padding:2em 12em;
+}
 .dark{
 	background-color: #1a1e23;
 	color: #f3f5f6;
@@ -240,8 +246,11 @@ img{
 	line-height:2;
 }
 .portfolio .small{
-	font-size:1.5rem;
+	font-size:2rem;
 
+}
+.portfolio .regular{
+	font-size:2.5rem;
 }
 .portfolio .medium{
 	font-size:4rem;
