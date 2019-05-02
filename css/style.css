@@ -5,8 +5,8 @@
 	box-sizing: border-box;
 }
 ::selection {
-  color: yellow; 
-  background:##ef5350;
+  color: blue; 
+  background:#ef5350;
 }
 .readable-hidden{
 	position: absolute;
