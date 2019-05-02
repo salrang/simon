@@ -177,6 +177,14 @@ body{
 .sns li::before{    /*의미없는 점이니까, 곁따옴표가 더 최신문법이야. 홑따옴표도 상관없어*/
 	content:"ㆍ";  
 	margin:0 5px;
+	/* content:".";
+	display:inline-block;
+	width:5px;
+	height:5px;
+	vertical-align:middle;
+	margin-top:-20px; 
+	중간점 없이 한번 해봤엉...
+	*/
 }
 
 .copyright{
